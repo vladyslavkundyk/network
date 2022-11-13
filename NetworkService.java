@@ -74,6 +74,8 @@ public class NetworkService {
 					HttpURLConnection urlc = (HttpURLConnection) url.openConnection();
 					if (urlc.getResponseCode() == 200) {
 						System.out.println("Адрес " + str + " доступен!\n");
+					} else if (urlc.getResponseCode() == 300) {
+						System.out.println("Адрес " + str + " перенаправляемый!\n");
 					} else {
 						System.out.println("Адрес " + str + " не доступен!\n");
 					}
